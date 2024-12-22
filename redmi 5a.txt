@@ -1,0 +1,7 @@
+sunnyraj
+========
+
+git clone https://github.com/SunnyRaj84348/android_kernel_xiaomi_msm8917.git -b lineage-15.1 kernel/xiaomi/msm8917
+git clone https://github.com/SunnyRaj84348/android_device_xiaomi_riva.git -b lineage-15.1 device/xiaomi/riva
+git clone https://github.com/SunnyRaj84348/android_vendor_xiaomi.git -b lineage-15.1 vendor/xiaomi
+git clone https://github.com/LineageOS/android_packages_resources_devicesettings.git -b lineage-15.1 packages/resources/devicesettings

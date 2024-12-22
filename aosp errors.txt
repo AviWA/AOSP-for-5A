@@ -1,0 +1,67 @@
+2.Ninja wrapper error
+While building lineage OS if you have followed all the steps until here you shouldn't get this error but sometimes it just doesn't work for no reason and may show you something like this.Ninja wrapper error
+
+Before attempting to run the below command to fix the issue and take a look at what it says i wasn't able to recreate this error and had to fill up my storage device to get this error and it shows there that there is no space left and only then it shows the ninja error so i can just freeup mu sapce and the issue will be solved.
+
+But sometimes it just shows this error with some bizarre errors and possibly the errors you maynot know of then you can run the below command to disable Ninja Wrapper.
+
+•Just type the below command in the terminal and the error will be fixed
+
+export USE_NINJA=false
+
+ 
+
+ 3.Jack Compiler Java heap size error.
+Well we already discussed this above that jack runs out of memory and even though we fixed it above there is a slight bit if chance you may get the error which many look like the theseJack Compiler Java heap size error
+
+GC overhead limit exceeded.
+Try increasing heap size with java option '-Xmx<size>'.
+
+•When you get an error like this you just have to increase the size by entering the below command.
+
+export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6G"
+
+Notice the above command at the end which says -Xmx4G where 4G corresponds to 4GB of space that we allowed it, even after this if you get this error just try increasing this by changing this to '-Xmx6G'  or something like that.
+
+•Also remember to change the line at the end of your ~/.bashrc file to configure it automatically
+
+sudo gedit ~/.bashrc
+
+Well these are most common errors that you'll face while building Lineage OS well if you face any other issues comment down below.
+Remove TLSv1, TLSv1.1 from jdk.tls.disabledAlgorithms in /etc/java-8-openjdk/security/java.security file
+
+/etc/java-8-openjdk/security/java.security
+
+./prebuilts/sdk/tools/jack-admin kill-server
+
+./prebuilts/sdk/tools/jack-admin start-server
+
+==================================================
+pkg not found whitelist errors
+
+cd build/make/core/tasks/check_boot_jars/
+
+com\.google\.i18n\.phonenumbers\..*
+com\.google\.i18n\.phonenumbers
+
+###################################################
+# Packages used for Android in Chrome OS
+org\.chromium\.arc
+org\.chromium\.arc\..*
+
+# QC adds
+com.qualcomm.qti
+com.quicinc.tcmiface
+com.qualcomm.wfd
+com.qualcomm.wfd.service
+org.codeaurora.ims
+org.codeaurora.internal
+qcom.fmradio
+
+###################################################
+# IFAA Manager used for Alipay and/or WeChat payment
+org\.ifaa\.android\.manager.*
+
+4. yylloc multiple defenitions error
+/home/avi/AOSP/kernel/xiaomi/msm8917/scripts/dtc/dtc-lexer.lex.c or dtc-lexer-lex.c_shipped 
+add extern to 640 line 
