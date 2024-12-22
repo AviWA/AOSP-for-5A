@@ -1,0 +1,26 @@
+deb https://debian.osuosl.org/debian/ bullseye main non-free contrib
+deb-src https://debian.osuosl.org/debian/ bullseye main non-free contrib
+
+deb https://debian.osuosl.org/debian/ bullseye-backports main contrib non-free
+
+deb https://debian.osuosl.org/ubuntu/ bullseye-backports main contrib non-free
+
+
+
+sudo apt install open-vm-tools-desktop -y
+
+sudo apt install debian-archive-keyring -y
+sudo gpg --export --armor `apt-cache show debian-archive-keyring | grep Filename | cut -d ' ' -f2 | sed -e 's/^pool\///' -e 's/\// /g' | sort -k3 -n | tail -n1 | awk '{print $2}'` > debian-archive-key.asc
+sudo gpg --import debian-archive-key.asc
+sudo apt-get install -y automake libre-dev libtool make pkg-config wget
+sudo apt-get install -t bullseye-backports cmake -y
+sudo apt-get install -y openjdk-8*
+sudo update-java-alternatives -a
+
+deb http://deb.debian.org/debian buster main contrib non-free 
+deb-src http://deb.debian.org/debian buster main contrib non-free
+deb http://deb.debian.org/debian-security/buster/updates main contrib non-free 
+deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+deb http://deb.debian.org/debian buster-updates main contrib non-free 
+deb-src http://deb.debian.org/debian buster-updates main contrib non-free
+deb http://deb.debian.org/debian buster-backports main contrib non-free
