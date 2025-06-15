@@ -26,7 +26,7 @@ git config --global user.name ak
 git config --global user.email lampphone092@gmail.com
 git config --global http.postBuffer 1737418240
 git config --global http.version HTTP/1.1
-
+git lfs install
 repo init -u https://github.com/LineageOS/android.git -b lineage-15.1
 
 repo sync
